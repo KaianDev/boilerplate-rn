@@ -20,11 +20,11 @@ export function Button({
     <Pressable
       onPress={onPress}
       className={cn(
-        'flex-row items-center justify-center rounded-md px-5 py-3 mb-4 border',
+        'mb-4 flex-row items-center justify-center rounded-md border px-5 py-3',
         {
-          'bg-sky-600 border-sky-600': theme === 'primary',
-          'bg-white border-gray-300': theme === 'secondary',
-          'bg-transparent border-transparent': theme === 'tertiary',
+          'border-sky-600 bg-sky-600': theme === 'primary',
+          'border-gray-300 bg-white': theme === 'secondary',
+          'border-transparent bg-transparent': theme === 'tertiary',
           'opacity-50': disabled,
         }
       )}
@@ -32,7 +32,7 @@ export function Button({
       {...rest}
     >
       <Text
-        className={cn('font-semibold text-lg tracking-wider', {
+        className={cn('text-lg font-semibold tracking-wider', {
           'text-black': theme === 'secondary',
           'text-white': theme === 'primary',
           'text-gray-800': theme === 'tertiary',
